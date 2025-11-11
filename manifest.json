@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Shortcut Guard",
+  "description": "Block site-defined shortcuts per site without breaking browser or extension keys.",
+  "version": "1.0.0",
+  "permissions": ["storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Shortcut Blocker"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["pageGuard.js"],
+      "matches": ["*://*/*"]
+    }
+  ]
+}
