@@ -5,21 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shortcut Blocker</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main class="popup">
-    <h1>Blocked Shortcut Keys</h1>
-    <div class="site-info">
-      <span class="site-info__label">Site:</span>
-      <span id="siteName" class="site-info__value">Detecting…</span>
-    </div>
-    <p id="siteMessage" class="site-message"></p>
-    <form id="addKeyForm" class="add-key-form">
-      <input id="keyInput" type="text" maxlength="20" placeholder="Enter key (e.g. k)" autofocus />
-      <button type="submit">Add</button>
-    </form>
-    <ul id="keyList" class="key-list"></ul>
-    <p class="hint">Changes sync across Chrome via chrome.storage.</p>
+  <main class="popup-container">
+    <header class="popup-header">
+      <h1>Shortcut Guard</h1>
+      <div class="site-badge">
+        <span class="site-badge__label">Active on:</span>
+        <span id="siteName" class="site-badge__value">Detecting…</span>
+      </div>
+    </header>
+    
+    <section class="status-section">
+      <p id="siteMessage" class="site-message"></p>
+    </section>
+
+    <section class="input-section">
+      <form id="addKeyForm" class="add-key-form">
+        <div class="input-group">
+          <input id="keyInput" type="text" maxlength="20" placeholder="Type a key (e.g. Ctrl+S)" autofocus autocomplete="off" />
+          <button type="submit" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <div class="list-header">
+        <h2>Blocked Keys</h2>
+      </div>
+      <ul id="keyList" class="key-list"></ul>
+    </section>
+
+    <footer class="popup-footer">
+      <p class="hint">Syncs across Chrome devices</p>
+    </footer>
   </main>
   <script src="popup.js"></script>
 </body>
