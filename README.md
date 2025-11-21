@@ -1,6 +1,6 @@
-# Shortcut Guard
+# Web Shortcut Blocker
 
-Shortcut Guard is a Chrome extension that blocks site-defined keyboard shortcuts on a per-domain basis without interfering with browser or extension commands. Use it to reclaim familiar keys on sites that hijack your muscle memory.
+Web Shortcut Blocker is a Chrome extension that blocks site-defined keyboard shortcuts on a per-domain basis without interfering with browser or extension commands. Use it to reclaim familiar keys on sites that hijack your muscle memory.
 
 ## Features
 - Block specific key presses per site while leaving browser shortcuts intact.
@@ -14,7 +14,7 @@ Shortcut Guard is a Chrome extension that blocks site-defined keyboard shortcuts
 3. Click **Load unpacked** and select this folder.
 4. Pin the extension from the toolbar to access it quickly.
 
-## Using Shortcut Guard
+## Using Web Shortcut Blocker
 1. Open any site you want to tame.
 2. Click the extension icon to open the popup.
 3. Confirm the detected domain, type the key to block (e.g. `k`), and click **Add**.
@@ -36,7 +36,7 @@ Notes:
 1. Ensure the repository only contains the files listed above (plus `README.md` and any desired license).
 2. Create a ZIP of the folder contents (without the parent directory). On macOS/Linux:
    ```bash
-   zip -r shortcut-guard.zip manifest.json popup.html popup.js styles.css content.js pageGuard.js README.md
+   zip -r web-shortcut-blocker.zip manifest.json popup.html popup.js styles.css content.js pageGuard.js README.md
    ```
 3. Upload the ZIP to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole/) as a new item or update.
 

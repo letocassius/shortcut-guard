@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Shortcut Guard",
+  "name": "Web Shortcut Blocker",
   "description": "Block site-defined shortcuts per site without breaking browser or extension keys.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -15,7 +15,7 @@
   "permissions": ["storage", "tabs"],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Shortcut Blocker",
+    "default_title": "Web Shortcut Blocker",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
